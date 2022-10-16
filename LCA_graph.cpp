@@ -7,6 +7,8 @@ const int logN = 20;
 int parent[maxN][logN]; // parent[i][j] is 2^j th parent of node i // for binary lifting ( parent which is at distance 2^j from that node)
 int depth[maxN];
 vector<int> adj[maxN];
+
+// function to find the lowest common ancestor of two given nodes in tree
 int lca(int u, int v)
 {
     if (depth[u] < depth[v])
@@ -64,6 +66,7 @@ void dfs(int node)
         }
     }
 }
+
 int main()
 {
     int n, u, v, q, r;
